@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :composers
+  resources :kanris
+
+  resources :composers do
+    resources :songs
+  end
 
   root 'composers#index'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -2,6 +2,8 @@
 
 <ul>
 	<% @composers.each do |composer| %>
-	<li><%= composer.name_ja %> (<%= composer.fullname_ja %>)</li>
+	<li><%= link_to composer.name_ja, composer_path(composer.id) %> (<%= composer.fullname_ja %>)</li>
 	<% end %>
 </ul>
+
+

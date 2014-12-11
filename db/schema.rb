@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211112136) do
+ActiveRecord::Schema.define(version: 20141211180316) do
 
   create_table "composers", force: true do |t|
     t.string   "name_ja"
@@ -21,5 +21,20 @@ ActiveRecord::Schema.define(version: 20141211112136) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "kanris", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "songs", force: true do |t|
+    t.string   "title_ja"
+    t.string   "title_en"
+    t.integer  "composer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "songs", ["composer_id"], name: "index_songs_on_composer_id"
 
 end

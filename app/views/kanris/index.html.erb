@@ -1,0 +1,10 @@
+<h1>作曲家一覧（管理用）</h1>
+
+<ul>
+  <% @composers.each do |composer| %>
+  <li><%= composer.name_ja %> (<%= composer.fullname_ja %>)</li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'New Kanri', new_kanri_path %>
