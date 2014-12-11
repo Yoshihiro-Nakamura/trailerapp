@@ -1,0 +1,39 @@
+<%= form_for @composer do |f| %>
+
+<div class="field">
+	<%= f.label :name_ja, "作曲家名" %>
+	<%= f.text_field :name_ja %>
+</div>
+<% if @composer.errors.any? %>
+<%= @composer.errors.messages[:name_ja][0] %>
+<% end %>
+
+<div class="field">
+	<%= f.label :fullname_ja, "作曲家名（フルネーム）" %>
+	<%= f.text_field :fullname_ja %>
+</div>
+<% if @composer.errors.any? %>
+<%= @composer.errors.messages[:fullname_ja][0] %>
+<% end %>
+
+<div class="field">
+	<%= f.label :name_en, "composer name" %>
+	<%= f.text_field :name_en %>
+</div>
+<% if @composer.errors.any? %>
+<%= @composer.errors.messages[:name_en][0] %>
+<% end %>
+
+<div class="field">
+	<%= f.label :fullname_en, "composer fullname" %>
+	<%= f.text_field :fullname_en %>
+</div>
+<% if @composer.errors.any? %>
+<%= @composer.errors.messages[:fullname_en][0] %>
+<% end %>
+
+<div class="actions">
+	<%= f.submit %>
+</div>
+
+<% end %>
